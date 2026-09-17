@@ -5,7 +5,7 @@
     "issue_summary": "VPN credential expired",
     "status": "Resolved",
     "is_closed": true,
-    "resolution": "Employee credentials were renewed through the VPN portal. Reminded employee of the 90-day renewal cycle.",
+    "resolution": "Employee credentials were renewed through the VPN portal.",
     "date_created": "2026-09-14",
     "date_closed": "2026-09-14",
     "kb_reference": "KB-02",
@@ -35,7 +35,7 @@
     "date_closed": null,
     "kb_reference": "KB-04",
     "category": "software_install",
-    "notes": "Software not found in approved catalog. Submitted for IT Security review. Expected turnaround: 3–5 business days."
+    "notes": "Software not found in approved catalog."
   },
   {
     "id": "TK-1045",
@@ -43,7 +43,7 @@
     "issue_summary": "Mailbox quota increase",
     "status": "Approved at 35GB",
     "is_closed": true,
-    "resolution": "Manager approval received. Quota increased from 25GB to 35GB (within 50GB cap).",
+    "resolution": "Manager approval received. Quota increased from 25GB to 35GB.",
     "date_created": "2026-09-10",
     "date_closed": "2026-09-12",
     "kb_reference": "KB-06",
@@ -55,7 +55,7 @@
     "issue_summary": "Printer paper jam, floor 2",
     "status": "Resolved",
     "is_closed": true,
-    "resolution": "Technician dispatched. Physical jam cleared and print spooler restarted. No further issues reported.",
+    "resolution": "Technician dispatched. Physical jam cleared and print spooler restarted.",
     "date_created": "2026-09-17",
     "date_closed": "2026-09-17",
     "kb_reference": "KB-05",
@@ -72,7 +72,7 @@
     "date_closed": null,
     "kb_reference": "KB-10",
     "category": "home_equipment",
-    "notes": "Manager sign-off received. Awaiting Finance approval for equipment allowance."
+    "notes": "Manager sign-off received. Awaiting Finance approval."
   },
   {
     "id": "TK-1048",
@@ -84,8 +84,7 @@
     "date_created": "2026-09-19",
     "date_closed": null,
     "kb_reference": "KB-09",
-    "category": "security_incident",
-    "notes": "Employee reported a suspicious email. Escalated to security@veridian-corp.example for investigation."
+    "category": "security_incident"
   },
   {
     "id": "TK-1049",
@@ -93,7 +92,7 @@
     "issue_summary": "Password reset",
     "status": "Resolved",
     "is_closed": true,
-    "resolution": "Account was locked after 5+ failed attempts. Account unlocked by IT. Employee reset password via self-service portal.",
+    "resolution": "Account unlocked by IT. Employee reset password via self-service portal.",
     "date_created": "2026-09-19",
     "date_closed": "2026-09-19",
     "kb_reference": "KB-01",
@@ -105,7 +104,7 @@
     "issue_summary": "Admin access request",
     "status": "Rejected — no business justification provided",
     "is_closed": true,
-    "resolution": "Request denied. Employee did not provide sufficient business justification for admin-level access. Advised to resubmit with manager approval and detailed use-case.",
+    "resolution": "Request denied. No sufficient business justification.",
     "date_created": "2026-09-20",
     "date_closed": "2026-09-20",
     "kb_reference": null,
@@ -118,7 +117,7 @@
     "issue_summary": "Guest Wi-Fi issued",
     "status": "Resolved",
     "is_closed": true,
-    "resolution": "Directed employee to front-desk kiosk. Guest Wi-Fi credentials generated successfully. Valid for 24 hours.",
+    "resolution": "Directed employee to front-desk kiosk. Guest Wi-Fi credentials generated.",
     "date_created": "2026-09-20",
     "date_closed": "2026-09-20",
     "kb_reference": "KB-07",
@@ -126,6 +125,34 @@
   },
   {
     "id": "TK-1052",
+    "employee": "Aditi Sharma",
+    "email": "aditi.sharma@veridian-corp.example",
+    "issue_summary": "My laptop won't turn on at all, it's completely dead, had it about 3.5 years now.",
+    "category": "laptop_issue",
+    "priority": "medium",
+    "status": "Open — investigating",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-03, ASSET-POLICY",
+    "notes": "Laptop age: 3.5 years — meets KB-03 threshold but under 4-year refresh cycle\nHardware failure reported — supports early replacement case\nRequires Finance sign-off for early replacement (Asset Management Policy)\nTicket created and escalated for review",
+    "escalation": {
+      "level": "medium",
+      "target": null,
+      "reason": "Policy conflict: KB-03 allows replacement after 3 years, but Asset Management Policy specifies a 4-year refresh cycle. Early replacement requires Finance sign-off."
+    },
+    "request_id": "REQ-01",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.563Z",
+        "action": "created",
+        "details": "Ticket created for: My laptop won't turn on at all, it's completely dead, had it about 3.5 years now."
+      }
+    ]
+  },
+  {
+    "id": "TK-1053",
     "employee": "Karan Mehta",
     "email": "karan.mehta@veridian-corp.example",
     "issue_summary": "I'm locked out of my account, tried my password 6 times.",
@@ -142,9 +169,305 @@
     "request_id": "REQ-03",
     "history": [
       {
-        "timestamp": "2026-09-17T15:22:57.437Z",
+        "timestamp": "2026-09-17T17:57:31.573Z",
         "action": "created",
         "details": "Ticket created for: I'm locked out of my account, tried my password 6 times."
+      }
+    ]
+  },
+  {
+    "id": "TK-1054",
+    "employee": "Ritu Bhatia",
+    "email": "ritu.bhatia@veridian-corp.example",
+    "issue_summary": "Need approval to install a data-analysis tool that's not in the software catalog.",
+    "category": "software_install",
+    "priority": "low",
+    "status": "Pending Security review",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-04",
+    "notes": "Non-catalog software detected\nIT Security review required (3–5 business days)\nAwaiting software details and business justification",
+    "escalation": null,
+    "request_id": "REQ-04",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.578Z",
+        "action": "created",
+        "details": "Ticket created for: Need approval to install a data-analysis tool that's not in the software catalog."
+      }
+    ]
+  },
+  {
+    "id": "TK-1055",
+    "employee": "Sanjay Oberoi",
+    "email": "sanjay.oberoi@veridian-corp.example",
+    "issue_summary": "My VPN stopped working this morning, says credentials expired.",
+    "category": "vpn_access",
+    "priority": "medium",
+    "status": "Resolved",
+    "is_closed": false,
+    "resolution": "VPN credentials expired (90-day cycle); Employee directed to self-service VPN renewal portal",
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-02",
+    "notes": "VPN credentials expired (90-day cycle)\nEmployee directed to self-service VPN renewal portal",
+    "escalation": null,
+    "request_id": "REQ-05",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.586Z",
+        "action": "created",
+        "details": "Ticket created for: My VPN stopped working this morning, says credentials expired."
+      }
+    ]
+  },
+  {
+    "id": "TK-1056",
+    "employee": "Meera Iyer",
+    "email": "meera.iyer@veridian-corp.example",
+    "issue_summary": "Printer on the 3rd floor keeps showing 'paper jam' even though there's no jam.",
+    "category": "printer_issue",
+    "priority": "low",
+    "status": "Open — investigating",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-05",
+    "notes": "Provided printer troubleshooting steps (check queue, restart spooler)\nAwaiting asset tag for technician dispatch\nPrinter location: floor 3",
+    "escalation": null,
+    "request_id": "REQ-06",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.593Z",
+        "action": "created",
+        "details": "Ticket created for: Printer on the 3rd floor keeps showing 'paper jam' even though there's no jam."
+      }
+    ]
+  },
+  {
+    "id": "TK-1057",
+    "employee": "Farhan Ali",
+    "email": "farhan.ali@veridian-corp.example",
+    "issue_summary": "I've started working from home 4 days a week, how do I get a monitor?",
+    "category": "home_equipment",
+    "priority": "low",
+    "status": "Pending approval",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-10",
+    "notes": "Employee appears eligible (works from home 4 days/week)\nRequires manager sign-off\nRequires Finance processing\nIT handles shipping once fully approved",
+    "escalation": null,
+    "request_id": "REQ-07",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.603Z",
+        "action": "created",
+        "details": "Ticket created for: I've started working from home 4 days a week, how do I get a monitor?"
+      }
+    ]
+  },
+  {
+    "id": "TK-1058",
+    "employee": "Ananya Reddy",
+    "email": "ananya.reddy@veridian-corp.example",
+    "issue_summary": "I think I got a phishing email asking for my login — forwarding it to a few teammates to check.",
+    "category": "security_incident",
+    "priority": "critical",
+    "status": "Escalated to Security Team (security@veridian-corp.example)",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-09",
+    "notes": "CRITICAL: Phishing email forwarded to other employees — policy violation (KB-09)\nEscalated to Security team with elevated priority\nEmployee advised to notify teammates to delete forwarded email\nPassword change recommended",
+    "escalation": {
+      "level": "critical",
+      "target": "Security Team (security@veridian-corp.example)",
+      "reason": "Security incident — potential phishing/malware. Requires immediate Security team investigation."
+    },
+    "request_id": "REQ-08",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.611Z",
+        "action": "created",
+        "details": "Ticket created for: I think I got a phishing email asking for my login — forwarding it to a few teammates to check."
+      }
+    ]
+  },
+  {
+    "id": "TK-1059",
+    "employee": "Rohit Desai",
+    "email": "rohit.desai@veridian-corp.example",
+    "issue_summary": "My mailbox is full and I can't send emails.",
+    "category": "email_quota",
+    "priority": "medium",
+    "status": "Resolved",
+    "is_closed": false,
+    "resolution": "Advised employee to archive old emails and clean up mailbox; Provided steps to free up space immediately; Quota increase available with manager approval (capped at 50GB)",
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-06",
+    "notes": "Advised employee to archive old emails and clean up mailbox\nProvided steps to free up space immediately\nQuota increase available with manager approval (capped at 50GB)",
+    "escalation": null,
+    "request_id": "REQ-09",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.623Z",
+        "action": "created",
+        "details": "Ticket created for: My mailbox is full and I can't send emails."
+      }
+    ]
+  },
+  {
+    "id": "TK-1060",
+    "employee": "Kavya Pillai",
+    "email": "kavya.pillai@veridian-corp.example",
+    "issue_summary": "Can someone give me admin access to the finance reporting server? Need it urgently for month-end.",
+    "category": "admin_access",
+    "priority": "high",
+    "status": "Open — investigating",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-02, KB-08, ASSET-POLICY",
+    "notes": "Admin access request flagged for security review\nBusiness justification required\nManager approval required\nPrecedent: TK-1050 was rejected for lack of justification",
+    "escalation": {
+      "level": "high",
+      "target": "IT Security + Manager",
+      "reason": "Admin/elevated access request requires business justification and manager approval. Previous similar request (TK-1050) was rejected for lack of justification."
+    },
+    "request_id": "REQ-10",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.630Z",
+        "action": "created",
+        "details": "Ticket created for: Can someone give me admin access to the finance reporting server? Need it urgently for month-end."
+      }
+    ]
+  },
+  {
+    "id": "TK-1061",
+    "employee": "Nikhil Bansal",
+    "email": "nikhil.bansal@veridian-corp.example",
+    "issue_summary": "New contractor joining my team next week, they'll need VPN access.",
+    "category": "vpn_access",
+    "priority": "medium",
+    "status": "Pending approval",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-02",
+    "notes": "Contractor VPN requires manager approval via access request form\nAwaiting contractor details and manager approval",
+    "escalation": null,
+    "request_id": "REQ-11",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.637Z",
+        "action": "created",
+        "details": "Ticket created for: New contractor joining my team next week, they'll need VPN access."
+      }
+    ]
+  },
+  {
+    "id": "TK-1062",
+    "employee": "Sneha Kulkarni",
+    "email": "sneha.kulkarni@veridian-corp.example",
+    "issue_summary": "I can't log into the expense tool, keeps saying invalid credentials.",
+    "category": "expense_tool",
+    "priority": "low",
+    "status": "Open — investigating",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-08",
+    "notes": "Clarifying whether this is a technical issue (IT) or account provisioning (Finance)\nIT can only help with login issues for existing accounts\nIf no account exists, redirect to Finance",
+    "escalation": null,
+    "request_id": "REQ-12",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.647Z",
+        "action": "created",
+        "details": "Ticket created for: I can't log into the expense tool, keeps saying invalid credentials."
+      }
+    ]
+  },
+  {
+    "id": "TK-1063",
+    "employee": "Aman Gupta",
+    "email": "aman.gupta@veridian-corp.example",
+    "issue_summary": "Laptop screen is flickering on and off, had it 2 years, might just need a fix not a replacement.",
+    "category": "laptop_issue",
+    "priority": "medium",
+    "status": "Open — investigating",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-03, ASSET-POLICY",
+    "notes": "Laptop age: 2 years — under 3-year threshold\nHardware failure reported — needs verification\nMay qualify for repair or early replacement with Finance sign-off",
+    "escalation": null,
+    "request_id": "REQ-13",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.659Z",
+        "action": "created",
+        "details": "Ticket created for: Laptop screen is flickering on and off, had it 2 years, might just need a fix not a replacement."
+      }
+    ]
+  },
+  {
+    "id": "TK-1064",
+    "employee": "Tanya Chopra",
+    "email": "tanya.chopra@veridian-corp.example",
+    "issue_summary": "Requesting approval to install a browser extension for productivity tracking.",
+    "category": "software_install",
+    "priority": "low",
+    "status": "Pending Security review",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-04",
+    "notes": "Non-catalog software detected\nIT Security review required (3–5 business days)\nAwaiting software details and business justification",
+    "escalation": null,
+    "request_id": "REQ-14",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.669Z",
+        "action": "created",
+        "details": "Ticket created for: Requesting approval to install a browser extension for productivity tracking."
+      }
+    ]
+  },
+  {
+    "id": "TK-1065",
+    "employee": "Rahul Menon",
+    "email": "rahul.menon@veridian-corp.example",
+    "issue_summary": "hey can you help, its not working",
+    "category": "unclear",
+    "priority": "low",
+    "status": "Open — investigating",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": null,
+    "notes": "Issue unclear — follow-up questions sent\nAwaiting employee clarification",
+    "escalation": null,
+    "request_id": "REQ-15",
+    "history": [
+      {
+        "timestamp": "2026-09-17T17:57:31.679Z",
+        "action": "created",
+        "details": "Ticket created for: hey can you help, its not working"
       }
     ]
   }
