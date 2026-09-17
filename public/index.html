@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veridian Corp Internal IT Service Agent — AI-powered employee support for IT issues, tickets, and knowledge base">
+  <title>Veridian Corp — IT Service Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="url(#brandGrad)"/>
+            <path d="M12 20L18 26L28 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="brandGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Veridian Corp</span>
+          <span class="brand-sub">IT Service Agent</span>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Main</div>
+        <button class="nav-item active" data-view="chat" id="nav-chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Agent Chat</span>
+          <div class="nav-badge" id="chat-badge" style="display:none">!</div>
+        </button>
+        <button class="nav-item" data-view="dashboard" id="nav-dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-view="requests" id="nav-requests">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Requests</span>
+          <div class="nav-count">15</div>
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Resources</div>
+        <button class="nav-item" data-view="tickets" id="nav-tickets">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span>Tickets</span>
+        </button>
+        <button class="nav-item" data-view="kb" id="nav-kb">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>Knowledge Base</span>
+        </button>
+        <button class="nav-item" data-view="audit" id="nav-audit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Audit Trail</span>
+        </button>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="system-status">
+          <div class="status-dot"></div>
+          <span>System Online</span>
+        </div>
+        <div class="week-info">Week of Sep 21–25, 2026</div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+      
+      <!-- CHAT VIEW -->
+      <div id="view-chat" class="view active">
+        <div class="view-header">
+          <div>
+            <h1>IT Support Agent</h1>
+            <p class="view-subtitle">AI-powered employee support — powered by Veridian Corp knowledge base</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-outline" id="btn-process-all" title="Process all 15 employee requests">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Process All Requests
+            </button>
+            <button class="btn btn-ghost" id="btn-reset" title="Reset to original state">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="chat-container">
+          <!-- Request Selector -->
+          <div class="request-selector" id="request-selector">
+            <div class="selector-header">
+              <h3>📋 Select an Employee Request</h3>
+              <p>Choose from the 15 pre-loaded requests or type a custom message below</p>
+            </div>
+            <div class="request-cards" id="request-cards">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div class="chat-messages" id="chat-messages">
+            <div class="welcome-message">
+              <div class="welcome-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="24" fill="url(#welcomeGrad)"/>
+                  <path d="M16 24L22 30L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <defs>
+                    <linearGradient id="welcomeGrad" x1="0" y1="0" x2="48" y2="48">
+                      <stop stop-color="#6366f1"/>
+                      <stop offset="1" stop-color="#a78bfa"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h2>Welcome to Veridian Corp IT Support</h2>
+              <p>I'm your AI-powered IT support agent. I can help with password resets, VPN issues, laptop problems, software requests, and more.</p>
+              <p class="welcome-hint">Select a request from above or type your issue below to get started.</p>
+            </div>
+          </div>
+
+          <!-- Chat Input -->
+          <div class="chat-input-area">
+            <div class="employee-info-bar" id="employee-info-bar" style="display:none">
+              <span class="employee-tag" id="current-employee-tag"></span>
+              <button class="btn-clear-employee" id="btn-clear-employee" title="Clear employee">✕</button>
+            </div>
+            <div class="chat-input-wrapper">
+              <textarea id="chat-input" placeholder="Describe your IT issue..." rows="1"></textarea>
+              <button id="btn-send" class="btn-send" title="Send message">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DASHBOARD VIEW -->
+      <div id="view-dashboard" class="view">
+        <div class="view-header">
+          <div>
+            <h1>Dashboard</h1>
+            <p class="view-subtitle">Real-time overview of IT service operations</p>
+          </div>
+          <button class="btn btn-outline" id="btn-refresh-dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Refresh
+          </button>
+        </div>
+        <div class="dashboard-content" id="dashboard-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- REQUESTS VIEW -->
+      <div id="view-requests" class="view">
+        <div class="view-header">
+          <div>
+            <h1>Employee Requests</h1>
+            <p class="view-subtitle">All 15 employee requests from the week of Sep 21–25, 2026</p>
+          </div>
+        </div>
+        <div class="requests-content" id="requests-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- TICKETS VIEW -->
+      <div id="view-tickets" class="view">
+        <div class="view-header">
+          <div>
+            <h1>Ticket Queue</h1>
+            <p class="view-subtitle">All tickets — active and historical</p>
+          </div>
+          <div class="header-actions">
+            <select id="ticket-filter" class="filter-select">
+              <option value="all">All Tickets</option>
+              <option value="open">Open</option>
+              <option value="closed">Closed</option>
+            </select>
+          </div>
+        </div>
+        <div class="tickets-content" id="tickets-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- KNOWLEDGE BASE VIEW -->
+      <div id="view-kb" class="view">
+        <div class="view-header">
+          <div>
+            <h1>Knowledge Base</h1>
+            <p class="view-subtitle">IT policies and resolution guides — source data for agent decisions</p>
+          </div>
+        </div>
+        <div class="kb-content" id="kb-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- AUDIT TRAIL VIEW -->
+      <div id="view-audit" class="view">
+        <div class="view-header">
+          <div>
+            <h1>Audit Trail</h1>
+            <p class="view-subtitle">Complete log of all agent actions and decisions</p>
+          </div>
+          <button class="btn btn-outline" id="btn-refresh-audit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Refresh
+          </button>
+        </div>
+        <div class="audit-content" id="audit-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

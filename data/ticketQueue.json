@@ -1,0 +1,151 @@
+[
+  {
+    "id": "TK-1042",
+    "employee": "R. Verma",
+    "issue_summary": "VPN credential expired",
+    "status": "Resolved",
+    "is_closed": true,
+    "resolution": "Employee credentials were renewed through the VPN portal. Reminded employee of the 90-day renewal cycle.",
+    "date_created": "2026-09-14",
+    "date_closed": "2026-09-14",
+    "kb_reference": "KB-02",
+    "category": "vpn_access"
+  },
+  {
+    "id": "TK-1043",
+    "employee": "S. Iyer",
+    "issue_summary": "Laptop replacement (3.2 yrs old)",
+    "status": "Approved — pending fulfillment",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-15",
+    "date_closed": null,
+    "kb_reference": "KB-03",
+    "category": "laptop_issue",
+    "notes": "Laptop age of 3.2 years meets KB-03 threshold of 3 years. Approved for replacement."
+  },
+  {
+    "id": "TK-1044",
+    "employee": "A. Khan",
+    "issue_summary": "Non-catalog software request",
+    "status": "Pending Security review",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-16",
+    "date_closed": null,
+    "kb_reference": "KB-04",
+    "category": "software_install",
+    "notes": "Software not found in approved catalog. Submitted for IT Security review. Expected turnaround: 3–5 business days."
+  },
+  {
+    "id": "TK-1045",
+    "employee": "P. Joshi",
+    "issue_summary": "Mailbox quota increase",
+    "status": "Approved at 35GB",
+    "is_closed": true,
+    "resolution": "Manager approval received. Quota increased from 25GB to 35GB (within 50GB cap).",
+    "date_created": "2026-09-10",
+    "date_closed": "2026-09-12",
+    "kb_reference": "KB-06",
+    "category": "email_quota"
+  },
+  {
+    "id": "TK-1046",
+    "employee": "M. Das",
+    "issue_summary": "Printer paper jam, floor 2",
+    "status": "Resolved",
+    "is_closed": true,
+    "resolution": "Technician dispatched. Physical jam cleared and print spooler restarted. No further issues reported.",
+    "date_created": "2026-09-17",
+    "date_closed": "2026-09-17",
+    "kb_reference": "KB-05",
+    "category": "printer_issue"
+  },
+  {
+    "id": "TK-1047",
+    "employee": "K. Singh",
+    "issue_summary": "Home office equipment request",
+    "status": "Pending Finance",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-18",
+    "date_closed": null,
+    "kb_reference": "KB-10",
+    "category": "home_equipment",
+    "notes": "Manager sign-off received. Awaiting Finance approval for equipment allowance."
+  },
+  {
+    "id": "TK-1048",
+    "employee": "T. Rao",
+    "issue_summary": "Phishing email reported",
+    "status": "Escalated to Security — under investigation",
+    "is_closed": false,
+    "resolution": null,
+    "date_created": "2026-09-19",
+    "date_closed": null,
+    "kb_reference": "KB-09",
+    "category": "security_incident",
+    "notes": "Employee reported a suspicious email. Escalated to security@veridian-corp.example for investigation."
+  },
+  {
+    "id": "TK-1049",
+    "employee": "V. Nambiar",
+    "issue_summary": "Password reset",
+    "status": "Resolved",
+    "is_closed": true,
+    "resolution": "Account was locked after 5+ failed attempts. Account unlocked by IT. Employee reset password via self-service portal.",
+    "date_created": "2026-09-19",
+    "date_closed": "2026-09-19",
+    "kb_reference": "KB-01",
+    "category": "password_reset"
+  },
+  {
+    "id": "TK-1050",
+    "employee": "J. Fernandes",
+    "issue_summary": "Admin access request",
+    "status": "Rejected — no business justification provided",
+    "is_closed": true,
+    "resolution": "Request denied. Employee did not provide sufficient business justification for admin-level access. Advised to resubmit with manager approval and detailed use-case.",
+    "date_created": "2026-09-20",
+    "date_closed": "2026-09-20",
+    "kb_reference": null,
+    "category": "admin_access",
+    "notes": "Admin access requests require documented business justification and manager approval."
+  },
+  {
+    "id": "TK-1051",
+    "employee": "L. Menon",
+    "issue_summary": "Guest Wi-Fi issued",
+    "status": "Resolved",
+    "is_closed": true,
+    "resolution": "Directed employee to front-desk kiosk. Guest Wi-Fi credentials generated successfully. Valid for 24 hours.",
+    "date_created": "2026-09-20",
+    "date_closed": "2026-09-20",
+    "kb_reference": "KB-07",
+    "category": "guest_wifi"
+  },
+  {
+    "id": "TK-1052",
+    "employee": "Karan Mehta",
+    "email": "karan.mehta@veridian-corp.example",
+    "issue_summary": "I'm locked out of my account, tried my password 6 times.",
+    "category": "password_reset",
+    "priority": "medium",
+    "status": "Resolved",
+    "is_closed": false,
+    "resolution": "Account unlocked by IT (locked after 5+ failed attempts); Employee directed to self-service password reset portal; No approval required",
+    "date_created": "2026-09-17",
+    "date_closed": null,
+    "kb_reference": "KB-01",
+    "notes": "Account unlocked by IT (locked after 5+ failed attempts)\nEmployee directed to self-service password reset portal\nNo approval required",
+    "escalation": null,
+    "request_id": "REQ-03",
+    "history": [
+      {
+        "timestamp": "2026-09-17T15:22:57.437Z",
+        "action": "created",
+        "details": "Ticket created for: I'm locked out of my account, tried my password 6 times."
+      }
+    ]
+  }
+]

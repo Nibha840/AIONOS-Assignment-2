@@ -1,0 +1,18 @@
+{
+  "name": "veridian-it-service-agent",
+  "version": "1.0.0",
+  "description": "Internal IT Service Agent for Veridian Corp — AIONOS Assignment 2",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test/runTests.js"
+  },
+  "keywords": ["it-support", "service-agent", "helpdesk", "veridian-corp"],
+  "author": "AIONOS Assignment",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}

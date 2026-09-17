@@ -1,0 +1,182 @@
+[
+  {
+    "id": "KB-01",
+    "title": "Password Reset",
+    "category": "account_access",
+    "keywords": ["password", "reset", "locked", "login", "account", "unlock", "failed attempts", "self-service"],
+    "content": "Employees can reset their own password via the self-service portal at any time. If locked out after 5 failed attempts, contact IT to unlock the account manually. No approval required.",
+    "resolution_steps": [
+      "Direct employee to the self-service password reset portal",
+      "If locked out (5+ failed attempts), IT unlocks the account manually",
+      "No approval is required for password resets"
+    ],
+    "auto_resolvable": true,
+    "requires_approval": false,
+    "escalation_needed": false
+  },
+  {
+    "id": "KB-02",
+    "title": "VPN Access",
+    "category": "network_access",
+    "keywords": ["vpn", "remote", "access", "credentials", "expired", "contractor", "manager approval", "renew"],
+    "content": "VPN access is granted automatically to all full-time employees. Contractors require manager approval submitted via the access request form. VPN credentials expire every 90 days and must be renewed by the employee.",
+    "resolution_steps": [
+      "Full-time employees: VPN access is automatic — check if credentials have expired (90-day cycle)",
+      "If expired, employee must renew credentials via the VPN portal",
+      "Contractors: require manager approval via access request form before VPN can be provisioned"
+    ],
+    "auto_resolvable": true,
+    "requires_approval": false,
+    "escalation_needed": false,
+    "conditional_approval": "Contractors require manager approval"
+  },
+  {
+    "id": "KB-03",
+    "title": "Laptop Replacement",
+    "category": "hardware",
+    "keywords": ["laptop", "replacement", "hardware", "broken", "dead", "screen", "repair", "new laptop", "refresh"],
+    "content": "Laptops are eligible for replacement after 3 years of service, or earlier in case of verified hardware failure. Requests must be raised at least 2 weeks in advance of intended replacement.",
+    "resolution_steps": [
+      "Check laptop age — eligible for replacement after 3 years",
+      "If hardware failure verified, early replacement possible",
+      "Request must be raised at least 2 weeks before intended replacement date",
+      "Note: Asset Management Policy specifies a 4-year refresh cycle; early replacement outside this cycle requires Finance sign-off in addition to IT approval"
+    ],
+    "auto_resolvable": false,
+    "requires_approval": true,
+    "escalation_needed": false,
+    "related_policy": "Asset Management Policy"
+  },
+  {
+    "id": "KB-04",
+    "title": "Software Installation Requests",
+    "category": "software",
+    "keywords": ["software", "install", "application", "program", "tool", "catalog", "non-catalog", "browser extension", "security review"],
+    "content": "Standard software (listed in the approved catalog) can be self-installed. Non-catalog software requires IT Security review, which takes 3–5 business days.",
+    "resolution_steps": [
+      "Check if the software is in the approved catalog",
+      "If in catalog: employee can self-install from the software center",
+      "If not in catalog: submit for IT Security review (3–5 business days)"
+    ],
+    "auto_resolvable": false,
+    "requires_approval": true,
+    "escalation_needed": false,
+    "conditional_approval": "Non-catalog software requires IT Security review"
+  },
+  {
+    "id": "KB-05",
+    "title": "Printer Troubleshooting",
+    "category": "hardware",
+    "keywords": ["printer", "print", "paper jam", "spooler", "queue", "asset tag", "printing"],
+    "content": "For printer issues, first check the printer queue and restart the print spooler. If the issue persists after restart, log a ticket with the printer's asset tag.",
+    "resolution_steps": [
+      "Step 1: Check the printer queue for stuck jobs and clear them",
+      "Step 2: Restart the print spooler service",
+      "Step 3: If issue persists, log a ticket with the printer's asset tag for technician dispatch"
+    ],
+    "auto_resolvable": false,
+    "requires_approval": false,
+    "escalation_needed": false,
+    "follow_up_needed": true,
+    "follow_up_questions": ["What is the printer's asset tag?", "Have you tried restarting the print spooler?", "Which floor is the printer located on?"]
+  },
+  {
+    "id": "KB-06",
+    "title": "Email Mailbox Quota",
+    "category": "email",
+    "keywords": ["email", "mailbox", "full", "quota", "storage", "archive", "send", "receive", "25gb", "50gb"],
+    "content": "Default mailbox quota is 25GB. Employees nearing quota should archive old mail. Quota increases beyond 25GB require manager approval and are capped at 50GB.",
+    "resolution_steps": [
+      "Step 1: Advise employee to archive old emails to free up space",
+      "Step 2: If still insufficient, a quota increase can be requested",
+      "Quota increase requires manager approval and is capped at 50GB"
+    ],
+    "auto_resolvable": true,
+    "requires_approval": false,
+    "escalation_needed": false,
+    "conditional_approval": "Quota increase beyond 25GB requires manager approval"
+  },
+  {
+    "id": "KB-07",
+    "title": "Guest Wi-Fi Access",
+    "category": "network_access",
+    "keywords": ["wifi", "wi-fi", "guest", "visitor", "wireless", "internet", "kiosk"],
+    "content": "Guest Wi-Fi credentials are valid for 24 hours and can be generated by any employee from the front-desk kiosk. No IT ticket required.",
+    "resolution_steps": [
+      "Direct employee to the front-desk kiosk to generate guest Wi-Fi credentials",
+      "Credentials are valid for 24 hours",
+      "No IT ticket is required"
+    ],
+    "auto_resolvable": true,
+    "requires_approval": false,
+    "escalation_needed": false
+  },
+  {
+    "id": "KB-08",
+    "title": "Expense Software Access",
+    "category": "cross_department",
+    "keywords": ["expense", "finance", "tool", "access", "login", "credentials", "account"],
+    "content": "Access to the expense management tool is granted by Finance, not IT. IT can only assist with login/technical issues once an account already exists.",
+    "resolution_steps": [
+      "If the employee does not have an account: redirect to Finance department for account provisioning",
+      "If the employee has an existing account but faces technical/login issues: IT can assist",
+      "Clarify whether this is an account provisioning or a technical login issue"
+    ],
+    "auto_resolvable": false,
+    "requires_approval": false,
+    "escalation_needed": false,
+    "redirect_department": "Finance"
+  },
+  {
+    "id": "KB-09",
+    "title": "Security Incident Reporting",
+    "category": "security",
+    "keywords": ["phishing", "malware", "virus", "hack", "unauthorized", "suspicious", "security", "breach", "scam"],
+    "content": "Any suspected phishing email, malware, or unauthorized access attempt must be reported to security@veridian-corp.example immediately and should not be forwarded to other employees.",
+    "resolution_steps": [
+      "IMMEDIATE ESCALATION: Report to security@veridian-corp.example",
+      "DO NOT forward suspicious emails to other employees",
+      "Preserve the original email for investigation",
+      "If employee has already forwarded the email, escalate with higher urgency"
+    ],
+    "auto_resolvable": false,
+    "requires_approval": false,
+    "escalation_needed": true,
+    "escalation_target": "security@veridian-corp.example",
+    "priority": "critical"
+  },
+  {
+    "id": "KB-10",
+    "title": "Work-From-Home Equipment",
+    "category": "hardware",
+    "keywords": ["work from home", "remote", "wfh", "home office", "monitor", "chair", "equipment", "allowance"],
+    "content": "Employees working remotely more than 3 days/week are eligible for a one-time home office equipment allowance (chair, monitor). Requires manager sign-off and Finance processing — IT only handles the equipment shipping request once approved.",
+    "resolution_steps": [
+      "Confirm employee works remotely more than 3 days per week",
+      "Employee must obtain manager sign-off",
+      "Finance processes the equipment allowance",
+      "Once approved, IT handles the equipment shipping request"
+    ],
+    "auto_resolvable": false,
+    "requires_approval": true,
+    "escalation_needed": false,
+    "required_approvals": ["Manager sign-off", "Finance processing"]
+  },
+  {
+    "id": "ASSET-POLICY",
+    "title": "Asset Management Policy (Extract)",
+    "category": "policy",
+    "keywords": ["asset", "hardware", "refresh", "cycle", "replacement", "laptop", "monitor", "finance"],
+    "content": "All company-issued hardware, including laptops and monitors, follows a standard 4-year refresh cycle from date of issue. Early replacement outside this cycle requires Finance sign-off in addition to IT approval.",
+    "resolution_steps": [
+      "Standard hardware refresh cycle is 4 years from date of issue",
+      "Early replacement requires Finance sign-off AND IT approval",
+      "This policy is issued by Finance & Assets, last updated Q2 2026"
+    ],
+    "auto_resolvable": false,
+    "requires_approval": true,
+    "escalation_needed": false,
+    "issued_by": "Finance & Assets",
+    "last_updated": "Q2 2026"
+  }
+]
